@@ -8,6 +8,8 @@
 <script type="text/javascript" src="jquery/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css"/>
 <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/axios.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 
 <title>Invest App</title>
 </head>
@@ -55,28 +57,28 @@
     <div data-role="fieldcontain">
     	<table width="100%" border="0" cellspacing="2" cellpadding="2">
   			<tr>
-    			<td width="10%"><label for="textinput3">GHS:</label></td>
-    			<td width="90%" align="center"><input type="text" name="textinput3" id="textinput3" value=""  /></td>
+    			<td width="10%"><label for="principal">GHS:</label></td>
+    			<td width="90%" align="center"><input type="number" min="0" step="1" name="textinput3" id="principal" value=""  /></td>
   			</tr>
 		</table>
     </div>
     <div data-role="fieldcontain">
       <fieldset data-role="controlgroup">
-        <input type="radio" name="radio1" id="radio1_0" value="" />
+        <input type="radio" name="tenure" id="radio1_0" value="91 days" onchange="calculate91DayTBill()"/>
         <label for="radio1_0">91 days</label>
-        <input type="radio" name="radio1" id="radio1_1" value="" />
+        <input type="radio" name="tenure" id="radio1_1" value="182 days" onchange="calculate182DayTBill()" />
         <label for="radio1_1">182 days</label>
       </fieldset>
     </div>
     <br />
     <div align="center">
-    	<p>GHS: 115</p><!-- Javascript to make this calculatable -->
+    	<p>GHS: <span id="total_value"></span></p><!-- Javascript to make this calculatable -->
     </div>
     
     <table width="100%" border="0" cellspacing="2" cellpadding="2">
   		<tr>
     		<td width="50%" align="center"><a href="#mmconfirm_page" data-role="button">Purchase</a></td>
-    		<td width="50%" align="center"><a href="#" data-role="button">Later</a></td>
+    		<td width="50%" align="center"><a href="#" data-role="button" onclick="saveCalculation()">Later</a></td>
   		</tr>
 	</table>
   	
@@ -97,8 +99,6 @@
     <div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b" data-dismissible="false">
   		<p>Confirm Investment</p>
 	</div>
-    
-    
   </div>
 </div>
 

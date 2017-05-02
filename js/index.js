@@ -6,7 +6,7 @@ let nextOfKin;
 let user;
 
 let apiService = axios.create({
-    baseURL: 'http://localhost:3000/',
+    baseURL: 'http://i4m.herokuapp.com/',
     timeout: 10000,
     // headers: { Authorization: "Token token=" + user.auth_token }
 });

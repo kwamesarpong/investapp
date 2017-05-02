@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/3.5.0"
-        id        = "com.playlist.com"
+        id        = "com.investapp.com"
         version   = "1.0.0">
 
-    <name>Playlist</name>
+    <name>InvestApp</name>
 
     <description>
-        Playlist is an app developed by Benjamin Blay.
+        Invest App is a product developed by KYO.
     </description>
 
-    <author href="http://benjaminblay.com" email="support@benjaminblay.com">
-        Benjamin Blay
+    <author href="http://kyo.com" email="support@kyo.com">
+        KYO
     </author>
 
 	

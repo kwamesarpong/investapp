@@ -21,14 +21,14 @@
   	<p align="center">Your details</p>
   	<br />
     <div data-role="fieldcontain">
-      <input type="text" name="textinput" id="textinput" placeholder="Name" value=""  />
+      <input type="text" name="user_name" id="user_name" placeholder="Name" value=""  />
     </div>
     <br />
     <div data-role="fieldcontain">
-      <input type="text" name="textinput2" id="textinput2" placeholder="Phone Number" value=""  />
+      <input type="text" name="user_phone_number" id="user_phone_number" placeholder="Phone Number" value=""  />
     </div>
     <br />
-    <a href="#next_of_kin" data-role="button">Next</a>
+    <a href="" data-role="button" onclick="createNewUser()">Next</a>
   </div>
 </div>
 
@@ -38,14 +38,14 @@
   	<p align="center">Next of kin details</p>
   	<br />
     <div data-role="fieldcontain">
-      <input type="text" name="textinput" id="textinput" placeholder="Name" value=""  />
+      <input type="text" name="next_of_kin_name" id="next_of_kin_name" placeholder="Name" value=""  />
     </div>
     <br />
     <div data-role="fieldcontain">
-      <input type="text" name="textinput2" id="textinput2" placeholder="Phone Number" value=""  />
+      <input type="text" name="next_of_kin_phone_number" id="next_of_kin_phone_number" placeholder="Phone Number" value=""  />
     </div>
     <br />
-    <a href="#inv_page" data-role="button">Next</a>
+    <a href="" data-role="button" onclick="createNextOfKing()">Next</a>
   </div>
 </div>
 
@@ -77,7 +77,7 @@
     
     <table width="100%" border="0" cellspacing="2" cellpadding="2">
   		<tr>
-    		<td width="50%" align="center"><a href="#mmconfirm_page" data-role="button">Purchase</a></td>
+    		<td width="50%" align="center"><a href="" data-role="button" onclick="buyTBill()">Purchase</a></td>
     		<td width="50%" align="center"><a href="#" data-role="button" onclick="saveCalculation()">Later</a></td>
   		</tr>
 	</table>
@@ -100,6 +100,13 @@
   		<p>Confirm Investment</p>
 	</div>
   </div>
+</div>
+
+<!-- ##########################  Portfolio Page  ############################ -->
+<div data-role="page" id="portfolio_page">
+    <div data-role="content">
+        <p align="center">Portfolio Page</p>
+    </div>
 </div>
 
 

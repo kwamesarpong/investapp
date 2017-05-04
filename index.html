@@ -15,11 +15,39 @@
 </head>
 
 <body>
+<!-- ##########################  Login Page  ############################ -->
+<div data-role="page" id="log_in">
+  <div data-role="content">
+  	<p align="center">Login</p>
+    <div data-role="fieldcontain">
+      <input type="text" name="user_phone_number" id="user_phone_number" placeholder="Phone Number" value=""  />
+    </div>
+    <br />
+    <div data-role="fieldcontain">
+      <input type="password" name="user_password" id="user_password" placeholder="Password" value=""  />
+    </div>
+    <br  />
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+  		<tr>
+    		<td><a href="#portfolio_page" data-role="button">Log in</a></td>
+  		</tr>
+  		<tr>
+    		<td>&nbsp;</td>
+  		</tr>
+  		<tr>
+    		<td>&nbsp;</td>
+  		</tr>
+        <tr>
+    		<td><a href="#sign_up" data-role="button">Sign Up</a></td>
+  		</tr>
+	</table>
+  </div>
+</div>
+
 <!-- ##########################  Sign Up Page  ############################ -->
 <div data-role="page" id="sign_up">
   <div data-role="content">
   	<p align="center">Your details</p>
-  	<br />
     <div data-role="fieldcontain">
       <input type="text" name="user_name" id="user_name" placeholder="Name" value=""  />
     </div>
@@ -28,7 +56,11 @@
       <input type="text" name="user_phone_number" id="user_phone_number" placeholder="Phone Number" value=""  />
     </div>
     <br />
-    <a href="" data-role="button" onclick="createNewUser()">Next</a>
+    <div data-role="fieldcontain">
+      <input type="password" name="user_password" id="user_password" placeholder="Password" value=""  />
+    </div>
+    <br  />
+	<a href="" data-role="button" onclick="createNewUser()">Next</a>
   </div>
 </div>
 
@@ -46,6 +78,44 @@
     </div>
     <br />
     <a href="" data-role="button" onclick="createNextOfKing()">Next</a>
+  </div>
+</div>
+
+<!-- ##########################  Onboarding page 1  ############################ -->
+<div data-role="page" id="onboarding1">
+  <div data-role="content">
+  	<p><b>What is a Treasury Bill?</b><br />
+    <i>Short term investment product offered by the Bank of Ghana on behalf of the Government. 
+	Purchasing a treasury bill is lending money to the Government.</i>
+    </p>
+    <p><b>What interest do I earn on my T-Bill?</b><br />
+    <i>Interest on all T-bills are decided by Bank of Ghana every week. The interest to be applied shall be the current interest rate on the day of purchase.</i>
+    </p>
+    <p><b>What is the charge?</b><br />
+    <i>You pay absolutely nothing when you buy treasury bills through I4M. It is free of charge.</i>
+    </p>
+    <br />
+    <a href="#onboarding2" data-role="button">Next</a>
+  </div>
+</div>
+
+<!-- ##########################  Onboarding page 2  ############################ -->
+<div data-role="page" id="onboarding2">
+  <div data-role="content">
+  	<p><b>What are the benefits?</b><br />
+    <i><ul>
+    	<li>Treasury bills are risk free.</li>
+		<li>They can easily be converted into cash.</li>
+		<li>Interest earned is higher than bank savings account rates.</li>
+		<li>No transaction cost. You do not pay anything.</li>
+		<li>They can be used as collateral for a loan.</li>
+		<li>Statements can be used when applying for visas.</li>
+	</ul></i>
+    </p>
+    <p><b>What minimum amount do I/we need to start?</b><br />
+    <i>Five  Ghana Cedis (GH¢ 5.00) only and thereafter in multiples of five Ghana Cedis (GH¢ 5.00).</i>
+    </p>
+    <a href="#inv_page" data-role="button">Next</a>
   </div>
 </div>
 
@@ -72,7 +142,7 @@
     </div>
     <br />
     <div align="center">
-    	<p>GHS: <span id="total_value"></span></p><!-- Javascript to make this calculatable -->
+    	<p>GHS: <span id="total_value"></span></p>
     </div>
     
     <table width="100%" border="0" cellspacing="2" cellpadding="2">
@@ -114,10 +184,25 @@
 <!-- ##########################  Portfolio Page  ############################ -->
 <div data-role="page" id="portfolio_page">
     <div data-role="content">
-        <p align="center">Portfolio Page</p>
+        <p align="center">Total Portfolio</p>
+        <p align="center">GHS: </p> <!-- Javascript function to calculate -->
+        <br />
+        <br />
+        <p align="center">Returns</p>
+        <p align="center">GHS: </p> <!-- Javascript function to calculate -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <a href="#" data-role="button">Add Investment</a>
     </div>
 </div>
 
+<!-- ##########################  Portfolio Page  ############################ -->
+<div data-role="page" id="settings">
+  <div data-role="content">Content</div>
+</div>
 
 
 </body>

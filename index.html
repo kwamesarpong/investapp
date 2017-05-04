@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css"/>
 <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/axios.min.js"></script>
-<script type="text/javascript" src="public/bundle.js"></script>
 
 <title>Invest App</title>
 </head>
@@ -28,7 +27,7 @@
       <input type="text" name="user_phone_number" id="user_phone_number" placeholder="Phone Number" value=""  />
     </div>
     <br />
-    <a href="" data-role="button" onclick="createNewUser()">Next</a>
+    <a href="" data-role="button" data-create-new-user>Next</a>
   </div>
 </div>
 
@@ -45,7 +44,7 @@
       <input type="text" name="next_of_kin_phone_number" id="next_of_kin_phone_number" placeholder="Phone Number" value=""  />
     </div>
     <br />
-    <a href="" data-role="button" onclick="createNextOfKing()">Next</a>
+    <a href="" data-role="button" data-create-next-of-kin>Next</a>
   </div>
 </div>
 
@@ -64,9 +63,9 @@
     </div>
     <div data-role="fieldcontain">
       <fieldset data-role="controlgroup">
-        <input type="radio" name="tenure" id="radio1_0" value="91 days" onchange="calculate91DayTBill()"/>
+        <input type="radio" name="tenure" id="radio1_0" value="91 days" data-calc-91-day-t-bill/>
         <label for="radio1_0">91 days</label>
-        <input type="radio" name="tenure" id="radio1_1" value="182 days" onchange="calculate182DayTBill()" />
+        <input type="radio" name="tenure" id="radio1_1" value="182 days" data-calc-182-day-t-bill />
         <label for="radio1_1">182 days</label>
       </fieldset>
     </div>
@@ -77,8 +76,8 @@
     
     <table width="100%" border="0" cellspacing="2" cellpadding="2">
   		<tr>
-    		<td width="50%" align="center"><a href="" data-role="button" onclick="buyTBill()">Purchase</a></td>
-    		<td width="50%" align="center"><a href="#" data-role="button" onclick="saveCalculation()">Later</a></td>
+    		<td width="50%" align="center"><a href="" data-role="button" data-buy-t-bill>Purchase</a></td>
+    		<td width="50%" align="center"><a href="#" data-role="button" data-save-calculation>Later</a></td>
   		</tr>
 	</table>
   	
@@ -109,7 +108,6 @@
     </div>
 </div>
 
-
-
+<script type="text/javascript" src="public/bundle.js"></script>
 </body>
 </html>

@@ -10,12 +10,10 @@ $("a[data-create-new-user]").click(function (e) {
    SignUp.createNewUser();
 });
 
-
 // Next of Kin
 $("a[data-create-next-of-kin]").click(function (e) {
     NextOfKin.createNextOfKing();
 });
-
 
 // Add Investment
 $("input[name='tenure']:radio").click(function () {

@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/3.5.0"
-        id        = "com.playlist.com"
+        id        = "com.investapp.com"
         version   = "1.0.0">
 
-    <name>Playlist</name>
+    <name>InvestApp</name>
 
     <description>
-        Playlist is an app developed by Benjamin Blay.
+        Invest App is a product developed by KYO.
     </description>
 
-    <author href="http://benjaminblay.com" email="support@benjaminblay.com">
-        Benjamin Blay
+    <author href="http://kyo.com" email="support@kyo.com">
+        KYO
     </author>
 
 	
@@ -35,7 +35,7 @@
 	
     
 
-	<preference name="SplashScreenDelay" value="5000" />
+	
 	
 
     <!-- Define app icon for each platform. -->
@@ -47,11 +47,17 @@
    
 
     <!-- Define app splash screen for each platform. -->
-	<gap:splash src="splash.png" />
-    <gap:splash src="splash/ldpi.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="splash/mdpi.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="splash/hdpi.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="splash/xhdpi.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+	
+	<platform name="android">
+		<!-- you can use any density that exists in the Android project -->
+
+		<splash src="splash/hdpi.png" density="port-hdpi"/>
+		<splash src="splash/ldpi.png" density="port-ldpi"/>
+		<splash src="splash/mdpi.png" density="port-mdpi"/>
+		<splash src="splash/xhdpi.png" density="port-xhdpi"/>
+	</platform>
+	
+	<preference name="SplashScreenDelay" value="5000" />
    
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
@@ -67,8 +73,7 @@
 
 	
 <plugin name="cordova-plugin-media" source="npm" spec="1.0.1" />
-<plugin name="br.com.paveisitemas.splashscreen" spec="2.1.1" source="pgb" />
-<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
+<plugin name="cordova-plugin-splashscreen" source="npm" spec="4.0.3" />
 <plugin name="cordova-plugin-whitelist" source="npm" spec="*"/>
 
 

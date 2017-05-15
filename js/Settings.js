@@ -1,3 +1,6 @@
-/**
- * Created by peter on 5/3/17.
- */
+import * as ApiService from './ApiService'
+
+export function logOut() {
+    ApiService.removeAuthToken();
+    location.href = "#log_in";
+}

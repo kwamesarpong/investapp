@@ -1,11 +1,22 @@
 import $ from 'jquery'
+import * as LogIn from './LogIn'
 import * as SignUp from './SignUp'
 import * as NextOfKin from './NextOfKin'
 import * as AddInvestment from './AddInvestment'
+import * as Settings from './Settings'
 
 AddInvestment.fetchBankOfGhanaRates();
 
-// SignUp user
+if (LogIn.isLoggedIn()) {
+    location.href = "#portfolio_page";
+}
+
+// Login
+$("a[data-login]").click(function (e) {
+    LogIn.logIn();
+});
+
+// SignUp
 $("a[data-create-new-user]").click(function (e) {
    SignUp.createNewUser();
 });
@@ -33,3 +44,8 @@ $("a[data-buy-t-bill]").click(function (e) {
 $("a[data-save-calculation]").click(function (e) {
     AddInvestment.saveCalculation();
 });
+
+$("a[data-log-out]").click(function (e) {
+    Settings.logOut();
+});
+

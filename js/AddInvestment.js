@@ -1,5 +1,4 @@
 import apiService from './ApiService'
-import {user} from './SignUp';
 
 const MAZZUMA_URL = 'https://client.teamcyst.com/app.php';
 const MAZZUMA_API_KEY = '06bbd3f84eb58b3bcb4531f7793ec43f787b753f';
@@ -33,11 +32,11 @@ export function calculate182DayTBill() {
 export function saveCalculation() {
     let principal = getPrincipal();
     let tenure = getTenure();
-    let userId = user.id;
-    console.log(principal, tenure, userId);
-    saveCalculatedTBill(principal, tenure, userId, function () {
-        location.href = "#portfolio_page";
+    console.log(principal, tenure);
+    saveCalculatedTBill(principal, tenure, function () {
+        // Do nothing
     });
+    //TODO: Clear the form
 }
 
 export function buyTBill() {
@@ -64,7 +63,6 @@ export function buyTBill() {
     //     purchased_t_bill: {
     //         principal: principal,
     //         tenure: tenure,
-    //         user_id: userId
     //     }
     // })
     //     .then(function (response) {
@@ -75,12 +73,11 @@ export function buyTBill() {
     //     });
 }
 
-function saveCalculatedTBill(principal, tenure, userId, callback) {
+function saveCalculatedTBill(principal, tenure, callback) {
     apiService.post('saved_t_bills.json', {
         saved_t_bill: {
             principal: principal,
-            tenure: tenure,
-            user_id: userId
+            tenure: tenure
         }
     })
         .then(function (response) {
